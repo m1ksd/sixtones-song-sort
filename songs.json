@@ -3,70 +3,56 @@
     "id": "imitation-rain",
     "title": "Imitation Rain",
     "album": "1ST",
-    "track_id": "4m48A8xG8x8S9eS8p6tX3L",
-    "img": "./images/1st.jpg"
-  },
-  {
-    "id": "navigator",
-    "title": "NAVIGATOR",
-    "album": "1ST",
     "track_id": "0g78L9R5W2K3N4M5P6Q7R8",
-    "img": "./images/1st.jpg"
+    "img": "https://i.scdn.co/image/ab67616d0000b2737604a1efd5c18408d6d67cfb"
   },
   {
-    "id": "new-era",
-    "title": "NEW ERA",
+    "id": "japonica-style",
+    "title": "JAPONICA STYLE",
     "album": "1ST",
-    "track_id": "1a2b3c4d5e6f7g8h9i0j1k",
-    "img": "./images/1st.jpg"
+    "track_id": "4m48A8xG8x8S9eS8p6tX3L",
+    "img": "https://i.scdn.co/image/ab67616d0000b2737604a1efd5c18408d6d67cfb"
   },
   {
     "id": "boku-ga-boku-ja-nai-mitai-da",
     "title": "僕が僕じゃないみたいだ",
     "album": "CITY",
-    "track_id": "2b3c4d5e6f7g8h9i0j1k2l",
-    "img": "./images/city.jpg"
+    "track_id": "5E30B2v1299y1A333XvK36",
+    "img": "https://i.scdn.co/image/ab67616d0000b2738f6b0fdf1bf77ca43bcae52f"
   },
   {
     "id": "mascara",
     "title": "マスカラ",
     "album": "CITY",
-    "track_id": "3c4d5e6f7g8h9i0j1k2l3m",
-    "img": "./images/city.jpg"
+    "track_id": "6qE4nK82b2i052X508vY2p",
+    "img": "https://i.scdn.co/image/ab67616d0000b2738f6b0fdf1bf77ca43bcae52f"
   },
   {
     "id": "kyomei",
     "title": "共鳴",
     "album": "声",
-    "track_id": "4d5e6f7g8h9i0j1k2l3m4n",
-    "img": "./images/koe.jpg"
+    "track_id": "2X1r3p25y90e54p6q8Y09r",
+    "img": "https://i.scdn.co/image/ab67616d0000b27357c32bfbc12ca3b584a3ad3e"
   },
   {
     "id": "watashi",
     "title": "わたし",
     "album": "声",
-    "track_id": "5e6f7g8h9i0j1k2l3m4n5o",
-    "img": "./images/koe.jpg"
+    "track_id": "3Z8m4A0217u84x2e9vX09r",
+    "img": "https://i.scdn.co/image/ab67616d0000b27357c32bfbc12ca3b584a3ad3e"
   },
   {
     "id": "kokkara",
     "title": "こっから",
     "album": "THE VIBES",
-    "track_id": "6f7g8h9i0j1k2l3m4n5o6p",
-    "img": "./images/thevibes.jpg"
+    "track_id": "7f09X1245y3221v56X789r",
+    "img": "https://i.scdn.co/image/ab67616d0000b27393d395a122601c5ef99e0323"
   },
   {
-    "id": "extra-vip",
-    "title": "EXTRA VIP (ジェシー×田中樹)",
-    "album": "1ST",
-    "track_id": "7g8h9i0j1k2l3m4n5o6p7q",
-    "img": "./images/1st.jpg"
-  },
-  {
-    "id": "tte-anata",
-    "title": "ってあなた (京本大我×松村北斗)",
-    "album": "1ST",
-    "track_id": "8h9i0j1k2l3m4n5o6p7q8r",
-    "img": "./images/1st.jpg"
+    "id": "abarero",
+    "title": "ABARERO",
+    "album": "THE VIBES",
+    "track_id": "1A234567890abcdefghijk",
+    "img": "https://i.scdn.co/image/ab67616d0000b27393d395a122601c5ef99e0323"
   }
 ]
