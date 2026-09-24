@@ -24,7 +24,7 @@
     <div id="start-screen" class="text-center space-y-6">
       <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 shadow-xl">
         <h2 class="text-lg font-bold mb-2">どちらが好きか選ぶだけ！</h2>
-        <p class="text-sm text-zinc-400 mb-6">曲を聴き比べながら、より好きな方のカードをタップしてください。</p>
+        <p class="text-sm text-zinc-400 mb-6">直感で好きな方のカードをタップしてください。</p>
         <button id="start-btn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg transition active:scale-95">
           ソートを始める
         </button>
@@ -47,31 +47,31 @@
         
         <!-- 左楽曲エリア -->
         <div class="flex flex-col items-center space-y-2">
-          <div id="card-left" class="w-full bg-zinc-900 border border-zinc-800 hover:border-red-500 rounded-2xl p-3 flex flex-col items-center cursor-pointer transition transform active:scale-95 shadow-lg">
+          <div id="card-left" class="w-full bg-zinc-900 border border-zinc-800 hover:border-red-500 rounded-2xl p-4 flex flex-col items-center cursor-pointer transition transform active:scale-95 shadow-lg">
             <img id="img-left" src="" alt="" class="w-full aspect-square object-cover rounded-xl mb-3 shadow">
             <h3 id="title-left" class="font-bold text-sm sm:text-base text-center line-clamp-2 min-h-[2.5rem] flex items-center justify-center"></h3>
+            <p id="album-left" class="text-xs text-zinc-500 mt-1"></p>
           </div>
-          <!-- Spotify リンク -->
           <a id="spotify-left" href="#" target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-xs text-center py-2 rounded-xl text-zinc-300 font-bold transition">
-            Spotifyで聴く ↗
+            Spotifyで検索 ↗
           </a>
         </div>
 
         <!-- 右楽曲エリア -->
         <div class="flex flex-col items-center space-y-2">
-          <div id="card-right" class="w-full bg-zinc-900 border border-zinc-800 hover:border-red-500 rounded-2xl p-3 flex flex-col items-center cursor-pointer transition transform active:scale-95 shadow-lg">
+          <div id="card-right" class="w-full bg-zinc-900 border border-zinc-800 hover:border-red-500 rounded-2xl p-4 flex flex-col items-center cursor-pointer transition transform active:scale-95 shadow-lg">
             <img id="img-right" src="" alt="" class="w-full aspect-square object-cover rounded-xl mb-3 shadow">
             <h3 id="title-right" class="font-bold text-sm sm:text-base text-center line-clamp-2 min-h-[2.5rem] flex items-center justify-center"></h3>
+            <p id="album-right" class="text-xs text-zinc-500 mt-1"></p>
           </div>
-          <!-- Spotify リンク -->
           <a id="spotify-right" href="#" target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-xs text-center py-2 rounded-xl text-zinc-300 font-bold transition">
-            Spotifyで聴く ↗
+            Spotifyで検索 ↗
           </a>
         </div>
 
       </div>
 
-      <button id="draw-btn" class="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs py-2 rounded-lg mt-2">
+      <button id="draw-btn" class="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs py-3 rounded-xl mt-2">
         どちらも同じくらい好き / わからない
       </button>
     </div>
@@ -80,7 +80,7 @@
     <div id="result-screen" class="hidden space-y-6">
       <div id="capture-area" class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 space-y-4">
         <div class="text-center border-b border-zinc-800 pb-3">
-          <p class="text-xs text-red-500 font-bold uppercase tracking-widest">My SixTONES Top 10</p>
+          <p class="text-xs text-red-500 font-bold uppercase tracking-widest">My SixTONES Top Ranking</p>
           <h2 class="text-xl font-black">あなたのSixTONES TOP 10</h2>
         </div>
         <div id="result-list" class="space-y-2"></div>
@@ -106,21 +106,27 @@
   </footer>
 
   <script>
-    let songData = [];
+    // HTML内に直接楽曲データを埋め込み（通信エラーを100%防止）
+    const songData = [
+      { id: "imitation-rain", title: "Imitation Rain", album: "1ST", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&auto=format&fit=crop&q=60" },
+      { id: "navigator", title: "NAVIGATOR", album: "1ST", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60" },
+      { id: "new-era", title: "NEW ERA", album: "1ST", img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60" },
+      { id: "boku-ga-boku-ja-nai-mitai-da", title: "僕が僕じゃないみたいだ", album: "CITY", img: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&auto=format&fit=crop&q=60" },
+      { id: "mascara", title: "マスカラ", album: "CITY", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60" },
+      { id: "kyomei", title: "共鳴", album: "声", img: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&auto=format&fit=crop&q=60" },
+      { id: "watashi", title: "わたし", album: "声", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&auto=format&fit=crop&q=60" },
+      { id: "good-luck", title: "Good Luck!", album: "声", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60" },
+      { id: "futaritsuki", title: "ふたり", album: "声", img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60" },
+      { id: "abarero", title: "ABARERO", album: "THE VIBES", img: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&auto=format&fit=crop&q=60" },
+      { id: "kokkara", title: "こっから", album: "THE VIBES", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60" },
+      { id: "creak", title: "CREAK", album: "THE VIBES", img: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&auto=format&fit=crop&q=60" }
+    ];
+
     let lstMember = [], rec = [];
     let head1 = 0, head2 = 0;
     let ncmp = 0, totalQuestions = 0;
     let finished = false;
     let sortedList = [];
-
-    async function loadSongs() {
-      try {
-        const response = await fetch('songs.json');
-        songData = await response.json();
-      } catch (error) {
-        alert('songs.json の読み込みに失敗しました。');
-      }
-    }
 
     function initSort() {
       const n = songData.length;
@@ -170,13 +176,15 @@
       const leftSong = songData[currentBlock.left[head1]];
       const rightSong = songData[currentBlock.right[head2]];
 
-      // カード表示
+      // カード描画
       document.getElementById('img-left').src = leftSong.img;
       document.getElementById('title-left').innerText = leftSong.title;
+      document.getElementById('album-left').innerText = leftSong.album;
       document.getElementById('spotify-left').href = `https://open.spotify.com/search/${encodeURIComponent(leftSong.title + ' SixTONES')}`;
 
       document.getElementById('img-right').src = rightSong.img;
       document.getElementById('title-right').innerText = rightSong.title;
+      document.getElementById('album-right').innerText = rightSong.album;
       document.getElementById('spotify-right').href = `https://open.spotify.com/search/${encodeURIComponent(rightSong.title + ' SixTONES')}`;
 
       // 進捗率
@@ -249,7 +257,7 @@
       });
     }
 
-    // イベント
+    // イベントリスナー設定
     document.getElementById('start-btn').addEventListener('click', () => {
       document.getElementById('start-screen').classList.add('hidden');
       document.getElementById('sort-screen').classList.remove('hidden');
@@ -284,8 +292,6 @@
       document.getElementById('result-screen').classList.add('hidden');
       document.getElementById('start-screen').classList.remove('hidden');
     });
-
-    window.addEventListener('DOMContentLoaded', loadSongs);
   </script>
 </body>
 </html>
