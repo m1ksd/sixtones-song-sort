@@ -46,27 +46,25 @@
       <div class="grid grid-cols-2 gap-3 sm:gap-4 mt-4">
         
         <!-- 左楽曲エリア -->
-        <div class="flex flex-col items-center space-y-2">
-          <div id="card-left" class="w-full bg-zinc-900 border border-zinc-800 hover:border-red-500 rounded-2xl p-3 flex flex-col items-center cursor-pointer transition transform active:scale-95 shadow-lg">
-            <img id="img-left" src="" alt="" class="w-full aspect-square object-cover rounded-xl mb-3 shadow">
-            <h3 id="title-left" class="font-bold text-sm sm:text-base text-center line-clamp-2 min-h-[2.5rem] flex items-center justify-center"></h3>
+        <div class="flex flex-col items-center space-y-3">
+          <!-- Spotify 埋め込みプレイヤー（ジャケット＋試聴機能一体型） -->
+          <div class="w-full aspect-square bg-zinc-900 rounded-2xl overflow-hidden shadow-lg border border-zinc-800">
+            <iframe id="spotify-player-left" src="" width="100%" height="100%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
-          <!-- Spotify 埋め込みプレイヤー（左） -->
-          <div class="w-full h-[80px] bg-zinc-900 rounded-xl overflow-hidden shadow">
-            <iframe id="spotify-player-left" src="" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
+          <button id="card-left" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl shadow transition active:scale-95 text-sm">
+            左の曲が好き！
+          </button>
         </div>
 
         <!-- 右楽曲エリア -->
-        <div class="flex flex-col items-center space-y-2">
-          <div id="card-right" class="w-full bg-zinc-900 border border-zinc-800 hover:border-red-500 rounded-2xl p-3 flex flex-col items-center cursor-pointer transition transform active:scale-95 shadow-lg">
-            <img id="img-right" src="" alt="" class="w-full aspect-square object-cover rounded-xl mb-3 shadow">
-            <h3 id="title-right" class="font-bold text-sm sm:text-base text-center line-clamp-2 min-h-[2.5rem] flex items-center justify-center"></h3>
+        <div class="flex flex-col items-center space-y-3">
+          <!-- Spotify 埋め込みプレイヤー（ジャケット＋試聴機能一体型） -->
+          <div class="w-full aspect-square bg-zinc-900 rounded-2xl overflow-hidden shadow-lg border border-zinc-800">
+            <iframe id="spotify-player-right" src="" width="100%" height="100%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
-          <!-- Spotify 埋め込みプレイヤー（右） -->
-          <div class="w-full h-[80px] bg-zinc-900 rounded-xl overflow-hidden shadow">
-            <iframe id="spotify-player-right" src="" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
+          <button id="card-right" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl shadow transition active:scale-95 text-sm">
+            右の曲が好き！
+          </button>
         </div>
 
       </div>
@@ -170,14 +168,7 @@
       const leftSong = songData[currentBlock.left[head1]];
       const rightSong = songData[currentBlock.right[head2]];
 
-      // カード描画
-      document.getElementById('img-left').src = leftSong.img;
-      document.getElementById('title-left').innerText = leftSong.title;
-
-      document.getElementById('img-right').src = rightSong.img;
-      document.getElementById('title-right').innerText = rightSong.title;
-
-      // Spotify 埋め込みプレイヤー更新
+      // Spotify 埋め込みプレイヤー描画（ジャケット＋再生ボタン付き）
       document.getElementById('spotify-player-left').src = `https://open.spotify.com/embed/track/${leftSong.track_id}?utm_source=generator&theme=0`;
       document.getElementById('spotify-player-right').src = `https://open.spotify.com/embed/track/${rightSong.track_id}?utm_source=generator&theme=0`;
 
@@ -240,12 +231,11 @@
         item.className = 'flex items-center gap-3 p-2 bg-zinc-950 rounded-xl border border-zinc-800/80';
         item.innerHTML = `
           <div class="font-black text-lg w-6 text-center ${rank <= 3 ? 'text-red-500' : 'text-zinc-500'}">${rank}</div>
-          <img src="${song.img}" class="w-12 h-12 rounded-lg object-cover">
           <div class="flex-grow min-w-0">
             <p class="font-bold text-sm truncate">${song.title}</p>
             <p class="text-xs text-zinc-500 truncate">${song.album}</p>
           </div>
-          <a href="https://open.spotify.com/track/${song.track_id}" target="_blank" rel="noopener noreferrer" class="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded">聴く ↗</a>
+          <a href="https://open.spotify.com/track/${song.track_id}" target="_blank" rel="noopener noreferrer" class="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded">Spotify ↗</a>
         `;
         resultListEl.appendChild(item);
       });
