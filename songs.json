@@ -1,0 +1,114 @@
+[
+  {
+    "id": "imitation-rain",
+    "title": "Imitation Rain",
+    "album": "1ST",
+    "spotify": "https://open.spotify.com/search/Imitation%20Rain%20SixTONES",
+    "img": "https://i.scdn.co/image/ab67616d0000b2737604a1efd5c18408d6d67cfb"
+  },
+  {
+    "id": "navigator",
+    "title": "NAVIGATOR",
+    "album": "1ST",
+    "spotify": "https://open.spotify.com/search/NAVIGATOR%20SixTONES",
+    "img": "https://i.scdn.co/image/ab67616d0000b2737604a1efd5c18408d6d67cfb"
+  },
+  {
+    "id": "new-era",
+    "title": "NEW ERA",
+    "album": "1ST",
+    "spotify": "https://open.spotify.com/search/NEW%20ERA%20SixTONES",
+    "img": "https://i.scdn.co/image/ab67616d0000b2737604a1efd5c18408d6d67cfb"
+  },
+  {
+    "id": "boku-ga-boku-ja-nai-mitai-da",
+    "title": "僕が僕じゃないみたいだ",
+    "album": "CITY",
+    "spotify": "https://open.spotify.com/search/僕が僕じゃないみたいだ",
+    "img": "https://i.scdn.co/image/ab67616d0000b2738f6b0fdf1bf77ca43bcae52f"
+  },
+  {
+    "id": "mascara",
+    "title": "マスカラ",
+    "album": "CITY",
+    "spotify": "https://open.spotify.com/search/マスカラ%20SixTONES",
+    "img": "https://i.scdn.co/image/ab67616d0000b2738f6b0fdf1bf77ca43bcae52f"
+  },
+  {
+    "id": "kyomei",
+    "title": "共鳴",
+    "album": "声",
+    "spotify": "https://open.spotify.com/search/共鳴%20SixTONES",
+    "img": "https://i.scdn.co/image/ab67616d0000b27357c32bfbc12ca3b584a3ad3e"
+  },
+  {
+    "id": "watashi",
+    "title": "わたし",
+    "album": "声",
+    "spotify": "https://open.spotify.com/search/わたし%20SixTONES",
+    "img": "https://i.scdn.co/image/ab67616d0000b27357c32bfbc12ca3b584a3ad3e"
+  },
+  {
+    "id": "good-luck",
+    "title": "Good Luck!",
+    "album": "声",
+    "spotify": "https://open.spotify.com/search/Good%20Luck!%20SixTONES",
+    "img": "https://i.scdn.co/image/ab67616d0000b27357c32bfbc12ca3b584a3ad3e"
+  },
+  {
+    "id": "futari",
+    "title": "ふたり",
+    "album": "声",
+    "spotify": "https://open.spotify.com/search/ふたり%20SixTONES",
+    "img": "https://i.scdn.co/image/ab67616d0000b27357c32bfbc12ca3b584a3ad3e"
+  },
+  {
+    "id": "abarero",
+    "title": "ABARERO",
+    "album": "THE VIBES",
+    "spotify": "https://open.spotify.com/search/ABARERO",
+    "img": "https://i.scdn.co/image/ab67616d0000b27393d395a122601c5ef99e0323"
+  },
+  {
+    "id": "kokkara",
+    "title": "こっから",
+    "album": "THE VIBES",
+    "spotify": "https://open.spotify.com/search/こっから",
+    "img": "https://i.scdn.co/image/ab67616d0000b27393d395a122601c5ef99e0323"
+  },
+  {
+    "id": "creak",
+    "title": "CREAK",
+    "album": "THE VIBES",
+    "spotify": "https://open.spotify.com/search/CREAK",
+    "img": "https://i.scdn.co/image/ab67616d0000b27393d395a122601c5ef99e0323"
+  },
+  {
+    "id": "extra-vip",
+    "title": "EXTRA VIP (ジェシー×田中樹)",
+    "album": "1ST",
+    "spotify": "https://open.spotify.com/search/EXTRA%20VIP",
+    "img": "https://i.scdn.co/image/ab67616d0000b2737604a1efd5c18408d6d67cfb"
+  },
+  {
+    "id": "tte-anata",
+    "title": "ってあなた (京本大我×松村北斗)",
+    "album": "1ST",
+    "spotify": "https://open.spotify.com/search/ってあなた",
+    "img": "https://i.scdn.co/image/ab67616d0000b2737604a1efd5c18408d6d67cfb"
+  },
+  {
+    "id": "japonica-style",
+    "title": "JAPONICA STYLE",
+    "album": "1ST",
+    "spotify": "https://open.spotify.com/search/JAPONICA%20STYLE",
+    "img": "https://i.scdn.co/image/ab67616d0000b2737604a1efd5c18408d6d67cfb"
+  },
+  {
+    "id": "anthem",
+    "title": "アンセム",
+    "album": "THE VIBES",
+    "spotify": "https://open.spotify.com/search/アンセム%20SixTONES",
+    "img": "https://i.scdn.co/image/ab67616d0000b27393d395a122601c5ef99e0323"
+  }
+]
